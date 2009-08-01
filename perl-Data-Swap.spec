@@ -10,6 +10,7 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.bz2
+Patch0:     Data-Swap-0.08-fix-format-security.patch
 
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
@@ -20,6 +21,7 @@ even if they have different types.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+%patch0 -b .format
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
