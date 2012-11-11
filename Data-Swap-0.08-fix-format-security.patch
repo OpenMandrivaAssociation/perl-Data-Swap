@@ -1,0 +1,11 @@
+--- Swap.xs.orig	2009-08-01 12:35:06.000000000 +0200
++++ Swap.xs	2009-08-01 12:35:28.000000000 +0200
+@@ -219,7 +219,7 @@
+ 		Perl_croak(aTHX_ "Not a reference");
+ 	if ((SvREADONLY(r1) && SvIMMORTAL(r1))
+ 			|| (SvREADONLY(r2) && SvIMMORTAL(r2)))
+-		Perl_croak(aTHX_ PL_no_modify);
++		Perl_croak(aTHX_ "%s", PL_no_modify);
+ 	br = NULL;
+ 	br = sv_move(aTHX_ &t, r1, br);
+ 	br = sv_move(aTHX_ r1, r2, br);
