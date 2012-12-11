@@ -41,3 +41,62 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/*/Data/Swap.pm
 %{perl_vendorlib}/*/auto/Data/Swap
 %{_mandir}/*/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.80.0-5
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Sun May 29 2011 Funda Wang <fwang@mandriva.org> 0.80.0-4
++ Revision: 681383
+- mass rebuild
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 0.80.0-3mdv2011.0
++ Revision: 555783
+- rebuild for perl 5.12
+
+* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.80.0-2mdv2010.0
++ Revision: 405949
+- adding patch to fix format security error
+- bump mkrel to force rebuild
+- rebuild using %%perl_convert_version
+
+* Sat Oct 11 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2009.1
++ Revision: 292102
+- update to new version 0.08
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.07-3mdv2009.0
++ Revision: 256481
+- rebuild
+
+* Tue Jan 15 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.07-1mdv2008.1
++ Revision: 152943
+- update to new version 0.07
+- update to new version 0.07
+
+* Tue Jan 15 2008 Thierry Vignaud <tv@mandriva.org> 0.06-2mdv2008.1
++ Revision: 152049
+- rebuild
+
+* Sat Dec 29 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.06-1mdv2008.1
++ Revision: 139189
+- update to new version 0.06
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sat Sep 15 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.05-2mdv2008.0
++ Revision: 86329
+- rebuild
+
+
+* Wed Sep 13 2006 Oden Eriksson <oeriksson@mandriva.com> 0.05-1mdv2007.0
+- rebuild
+
+* Thu Jul 14 2005 Oden Eriksson <oeriksson@mandriva.com> 0.05-1mdk
+- initial Mandriva package
+
