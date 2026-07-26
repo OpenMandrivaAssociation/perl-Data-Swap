@@ -1,15 +1,13 @@
 %define upstream_name    Data-Swap
-%define upstream_version 0.08
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	7
+Version:    0.08
+Release:	8
 
 Summary:	Data-Swap module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{version}.tar.bz2
 Patch0:     Data-Swap-0.08-fix-format-security.patch
 
 BuildRequires:	make
@@ -21,7 +19,7 @@ This module allows you to swap the contents of two referenced variables,
 even if they have different types.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %patch0 -b .format
 
 %build
@@ -61,9 +59,7 @@ rm -rf %{buildroot}
 + Revision: 405949
 - adding patch to fix format security error
 - bump mkrel to force rebuild
-- rebuild using %%perl_convert_version
-
-* Sat Oct 11 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2009.1
+- rebuild using %0.08 Sat Oct 11 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2009.1
 + Revision: 292102
 - update to new version 0.08
 
